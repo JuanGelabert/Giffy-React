@@ -10,9 +10,13 @@ export default function Buscador() {
     }, 1500);
   }
   
+  function preventDefault(e) {
+    e.preventDefault()
+  }
+  
   return (
     <>
-      <form>
+      <form onSubmit={preventDefault}>
           <input
               key="buscador"    
               type='search'
