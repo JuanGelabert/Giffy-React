@@ -10,10 +10,8 @@ export default function SearchResults({params}) {
     const { loading, gifs } = useGifs({keyword})
     
     return <>
-        <Link to='/'><h1>Giffy</h1></Link>
-        <h3>
-            <i>El mejor buscador de Gifs hecho en React</i>
-        </h3>
+        <Link to='/'>Giffy</Link>
+        <h3><i>El mejor buscador de Gifs hecho en React</i></h3>
 
         <Buscador />
 
@@ -21,6 +19,5 @@ export default function SearchResults({params}) {
             ? <Spinner />
             : <ListOfGifs gifs={gifs} />
         }
-
     </>
 };

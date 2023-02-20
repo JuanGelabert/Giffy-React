@@ -7,7 +7,7 @@ export default function Home() {
     
     return (
         <>
-            <Link to='/'><h1>Giffy</h1></Link>
+            <Link to='/'>Giffy</Link>
             <h3><i>El mejor buscador de Gifs hecho en React</i></h3>
 
             <Buscador />

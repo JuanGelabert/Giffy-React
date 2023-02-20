@@ -1,5 +1,6 @@
 import React from 'react'
 import Gif from '../Gif'
+import PropTypes from 'prop-types';
 import './styles.css'
 
 export default function ListOfGifs({ gifs }) {
@@ -17,3 +18,7 @@ export default function ListOfGifs({ gifs }) {
       }
    </div>
 }
+
+ListOfGifs.propTypes = {
+   gifs: PropTypes.array.isRequired,
+ };
