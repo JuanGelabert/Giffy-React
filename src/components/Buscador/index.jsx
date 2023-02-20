@@ -5,6 +5,7 @@ import { useLocation } from 'wouter'
 export default function Buscador() {
 
   const [keyword, setKeyword] = useState('')
+  // eslint-disable-next-line no-unused-vars
   const [path, pushLocation] = useLocation()
 
   const handleChange = evt => {
