@@ -5,12 +5,10 @@ import Spinner from '../Spinner'
 import './styles.css'
 
 
-export default function ListOfGifs({ params }) {
+export default function ListOfGifs({ keyword }) {
 
-    const {keyword} = params
-    
     const [gifs, setGifs] = useState([])
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState( false )
 
     useEffect(() => {
         setLoading(true)

@@ -3,7 +3,8 @@ import { Link } from 'wouter'
 import Buscador from '../../components/Buscador'
 import ListOfGifs from '../../components/ListOfGifs'
 
-export default function SearchResults({keyword}) {
+export default function SearchResults({params}) {
+    const {keyword} = params
     
     return (
         <>
