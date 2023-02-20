@@ -3,6 +3,7 @@
 }
 
 .ListOfGifs {
+    margin-top: 1rem;
     column-count: var(--results-column);
     column-gap: .5rem;
 }
