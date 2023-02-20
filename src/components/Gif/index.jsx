@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 export default function Gif({title, url}) {
     return (
         <div className='img-container'>
-            <img src={url} alt={title} />
-            <div className="titulo-img">{ title }</div>    
+            <img loading='lazy' src={url} alt={title} />
+            <h4 className="titulo-img">{ title }</h4>    
         </div>
     )
 }

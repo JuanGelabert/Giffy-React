@@ -9,13 +9,13 @@ img {
 }
 
 .titulo-img {
-  font-size: 10px;
+  position: absolute;
+  font-size: .5rem;
   text-align: left;
   background: #000000;
-  bottom: .4rem;
+  bottom: -.3rem;
   color: #FFFFFF;
   left: 0;
   opacity: 0.5;
-  position: absolute;
-  padding: 5px;
+  padding: .2rem;
 }
