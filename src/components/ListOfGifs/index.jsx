@@ -7,26 +7,30 @@ import './styles.css'
 
 export default function ListOfGifs({ keyword }) {
 
-    const [gifs, setGifs] = useState([])
-    const [loading, setLoading] = useState( false )
+   const [gifs, setGifs] = useState([])
+   const [loading, setLoading] = useState( false )
 
-    useEffect(() => {
-        setLoading(true)
-        getGifs({ keyword })
-            .then(gifs => {
-                setGifs(gifs)
-                setLoading(false)
-            })
-    }, [keyword])
+   useEffect(() => {
+      setLoading(true)
+      getGifs({ keyword })
+         .then(gifs => {
+            setGifs(gifs)
+            setLoading(false)
+         })
+   }, [keyword])
 
-    if (loading) return <Spinner />
+   if (loading) return <Spinner />
 
-    return gifs.map( ({id, title, url}) =>
-        <Gif
-            key={id}
-            id={id}
-            title={title}
-            url={url}
-        />
-    )
+   return <div className='ListOfGifs'>
+      {
+         gifs.map(({ id, title, url }) =>
+            <Gif
+               key={id}
+               id={id}
+               title={title}
+               url={url}
+            />
+         )
+      }
+   </div>
 }
