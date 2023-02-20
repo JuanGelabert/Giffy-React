@@ -4,25 +4,25 @@ import './styles.css'
 
 export default function Buscador() {
 
-  function onChangeHandler(e) {
+  const handleChange = e => {
     setTimeout(() => {
       // eslint-disable-next-line no-restricted-globals
       history.pushState(null, "", `/search/${e.target.value}`);
     }, 1500);
   }
   
-  function preventDefault(e) {
+  const handleSubmit = e => {
     e.preventDefault()
   }
   
   return (
     <>
-      <form onSubmit={preventDefault}>
+      <form onSubmit={handleSubmit}>
           <input
               key="buscador"    
               type='search'
               placeholder='Busca el GIF que quieras'
-              onChange={onChangeHandler}
+              onChange={handleChange}
           />
       </form>
       {/* <ListOfGifs keyword={keyword} /> */}
