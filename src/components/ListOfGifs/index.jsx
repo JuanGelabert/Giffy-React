@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import Gif from '../Gif'
 import getGifs from '../../services/getGifs'
 import Spinner from '../Spinner'
+import './styles.css'
+
 
 export default function ListOfGifs({ params }) {
 
