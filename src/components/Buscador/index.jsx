@@ -14,8 +14,13 @@ export default function Buscador() {
   
   const handleSubmit = evt => {
     evt.preventDefault()
+
     // navegar a otra ruta
-    pushLocation(`/search/${keyword}`)
+    if (evt.target[0].value === '') {
+      pushLocation(`/`)
+    } else {
+      pushLocation(`/search/${keyword}`)
+    }
   }
   
   return (
